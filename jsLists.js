@@ -95,7 +95,7 @@
 		};
 
 		JSLists.generateCss = function(){
-			var css = document.createElement('style');
+			var css = document.createElement('style'); //Should all this be a seperate CSS file?
 			var styles = ".jslist-li{margin-left: 22px;}";	//This is for the LI with a list below
 			styles += ".jslist-ul{margin-left: 22px;}";	//This is for all UL's
 			styles += ".jslist-ol{margin-left: 22px;}";	//This is for all OL's
