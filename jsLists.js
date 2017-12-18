@@ -1,10 +1,6 @@
 /*
  *	JSLists v0.3.7
  *	© 2016 George Duff
- *
- *	http://www.thetechy.890m.com
- *	georged_903@hotmail.com
- *
  * 	Release date: 01/06/2016
  *	The MIT License (MIT)
  *	Copyright (c) 2016 George Duff
@@ -12,18 +8,6 @@
  *	The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
  *	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
- 
- /*
-	TO DO LIST - Will get round to most of them at some point!
-	1.	Add filter for UL, OL, or ALL
-	2.	Add the ability to pass in the name of a class to apply to non toggle lines
-	3.	Pass in which list type and toggle i.e. UL / OL
-	4.	Collapse All & Open All ar ropey at best!
-	5.	Add ability to parse dt & dl lists
-	6.	Make the toggle button dynamic and scaleable
-	7.	Add a search function
-	8.	Need to auto add icons for folders and items
-*/
 (function(){
 	'use strict';
 	function define_JSLists(){
