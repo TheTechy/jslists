@@ -1,0 +1,170 @@
+<!doctype html>
+<html>
+	<head>
+		<title>JSList - Very simple nested list example</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+		<style>
+			* {
+				box-sizing: border-box;
+			}
+			html,body{
+				margin: 0;
+				padding: 0;
+				font-family: sans-serif;
+				font-size: 18px;
+			}
+			/* ONLY required CSS */
+			ul,ol{
+				margin: 0;
+				padding: 0;
+			}
+			li{
+				list-style: none;
+			}
+			.headBnr{
+				position: absolute;
+				width: 100%;
+				height: 80px;
+				background-color: #ccc;
+			}
+			.simpleListInfo{
+				position: absolute;
+				right: 5%;
+				top: 12%;
+				width: 65%;
+				overflow-y: scroll;
+			}
+			.simpleListContainer{
+				position: absolute;
+				left: 3%;
+				top: 15%;
+				width: 15%;
+				min-width: 200px;
+				border: 1px solid rgb(165, 165, 165);
+				padding: 15px;
+			}
+			#title {
+				font-size: 26px;
+				font-weight: 900;
+				padding-left: 3%;
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<div class="headBnr">
+				<div id='title'><p>JSLists - <span style="font-size: 20px;">A simple way to make HTML lists collapsible</span></p></div>
+			</div>
+			<div class="simpleListInfo">
+				<p>This is an example of using JSLists to create a collapsible list with multiple levels of nesting.</p>
+				<p>Becasue JSLists doesn't effect any element of the HTML list you are passing is, you can use all of the functionality of standard HTML list.</p>
+				<p>So ALL list items can contain any valid HTML elements, such as anchors &lt;a&gt;, &lt;img&gt;, &lt;div&gt; etc.</p>
+				<p>In this example, I have included the links to the amazing <a href="https://fortawesome.github.io/Font-Awesome/" target="_new">FontAwesome</a> CSS library</p>
+				<p>At present, you will have to manually add these.</p>
+				<p>Calling JSLists is simple. In the example below, we simply pass the ID of the list we want to collapse:
+				<code>&lt;script&gt;<br>&nbsp;JSLists.applyToList('simple_list', 'ALL');&lt;/script&gt;</code></p>
+			</div>
+		</header>
+		<main>
+			<div class="simpleListContainer">
+				<ul id="simple_list">
+					<li>
+						<i class="fa fa-folder-o" aria-hidden="true"></i>
+						<b>Folder One</b>
+						<ul>
+							<li id="aa1"><i class="fa fa-file-text-o" aria-hidden="true"></i> Click Me</li>
+							<a href="https://www.google.com"><li><i class="fa fa-file-text-o" aria-hidden="true"></i> Item Two</li></a>
+							<li><i class="fa fa-file-text-o" aria-hidden="true"></i> Item Three</li>
+							<li><i class="fa fa-file-text-o" aria-hidden="true"></i> Item Four</li>
+							<li><i class="fa fa-file-text-o" aria-hidden="true"></i> Item Five</li>
+						</ul>
+					</li>
+					<li>
+						<i class="fa fa-folder-o" aria-hidden="true"></i>
+						<b><a href="#">Folder Two</a></b>
+						<ul>
+							<li><i class="fa fa-folder-o" aria-hidden="true"></i> Item One
+								<ul>
+									<li><i class="fa fa-file-text-o" aria-hidden="true"></i><a href="#"> A</a></li>
+									<li><i class="fa fa-file-text-o" aria-hidden="true"></i> B</li>
+									<li><i class="fa fa-file-text-o" aria-hidden="true"></i> C</li>
+								</ul>
+							</li>
+							<li><i class="fa fa-file-text-o" aria-hidden="true"></i> Item Two</li>
+							<li><i class="fa fa-file-text-o" aria-hidden="true"></i> Item Three</li>
+							<li>
+								<i class="fa fa-folder-o" aria-hidden="true"></i> Item Four
+																<ul>
+									<li><i class="fa fa-file-text-o" aria-hidden="true"></i><a href="#"> A</a></li>
+									<li><i class="fa fa-file-text-o" aria-hidden="true"></i> B</li>
+									<li><i class="fa fa-folder-o" aria-hidden="true"></i> C
+										<ul>
+											<li><i class="fa fa-file-text-o" aria-hidden="true"></i><a href="#"> A</a></li>
+											<li><i class="fa fa-folder-o" aria-hidden="true"></i> B
+												<ul>
+													<li><i class="fa fa-file-text-o" aria-hidden="true"></i><a href="#"> A</a></li>
+													<li><i class="fa fa-file-text-o" aria-hidden="true"></i> B</li>
+													<li><i class="fa fa-folder-o" aria-hidden="true"></i> C
+														<ul>
+															<li><i class="fa fa-file-text-o" aria-hidden="true"></i><a href="#"> A</a></li>
+															<li><i class="fa fa-file-text-o" aria-hidden="true"></i> B</li>
+															<li><i class="fa fa-file-text-o" aria-hidden="true"></i> C</li>
+														</ul>
+													</li>
+												</ul>
+											</li>
+											<li><i class="fa fa-file-text-o" aria-hidden="true"></i> C</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li><i class="fa fa-file-text-o" aria-hidden="true"></i> Item Five</li>
+						</ul>
+					</li>
+					<li>
+						<i class="fa fa-folder-o" aria-hidden="true"></i>
+						<b>Folder Three</b>
+						<ul>
+							<li><i class="fa fa-file-text-o" aria-hidden="true"></i> Item One</li>
+							<li><i class="fa fa-file-text-o" aria-hidden="true"></i> Item Two</li>
+							<li><i class="fa fa-file-text-o" aria-hidden="true"></i> Item Three</li>
+							<li><i class="fa fa-file-text-o" aria-hidden="true"></i> Item Four</li>
+							<li><i class="fa fa-file-text-o" aria-hidden="true"></i> Item Five</li>
+						</ul>
+					</li>
+					<li>
+						<i class="fa fa-folder-o" aria-hidden="true"></i>
+						<b>Folder Four</b>
+						<ul>
+							<li><i class="fa fa-file-text-o" aria-hidden="true"></i> Item One</li>
+							<li><i class="fa fa-file-text-o" aria-hidden="true"></i> Item Two</li>
+							<li><i class="fa fa-file-text-o" aria-hidden="true"></i> Item Three</li>
+							<li><i class="fa fa-file-text-o" aria-hidden="true"></i> Item Four</li>
+							<li><i class="fa fa-file-text-o" aria-hidden="true"></i> Item Five</li>
+						</ul>
+					</li>
+					<li>
+						<i class="fa fa-folder-o" aria-hidden="true"></i>
+						<b>Folder Five</b>
+						<ul>
+							<li>Item One</li>
+							<li>Item Two</li>
+							<li>Item Three</li>
+							<li>Item Four</li>
+							<li>Item Five</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</main>
+		<footer>
+		</footer>
+		<script src="jsLists.min.js"></script>
+		<script>
+			document.getElementById('aa1').addEventListener('click', function(e){
+				alert('You clicked link: ' + e.target.id);
+			},true);
+			JSLists.applyToList('simple_list', 'ALL');
+		</script>
+	</body>
+</html>
