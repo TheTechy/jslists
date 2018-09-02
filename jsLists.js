@@ -17,6 +17,9 @@
 //	Make the margins user definable
 //	Add support for UL & OL
 
+var blackCircle = '&#9679; ';
+var openCircle = '&#9678; ';
+
 (function() {
 	"use strict";
     function define_JSLists() {
@@ -93,11 +96,17 @@
 					listItems[i].classList.add('jslist-li');
 				}
 			}
+			for(i=1; i<listItems.length; i++) {
+				// console.log(listItems[i].childNodes.length);
+				if(listItems[i].classList = "jslist-li" && listItems[i].childNodes.length < 2) {
+					listItems[i].innerHTML = blackCircle + listItems[i].innerHTML
+				}
+			}
 			this.padUnorderedLists(listId);
 			this.padOrderedLists(listId);
 		};
 
-        JSLists.createTree = function(listId) {
+        JSLists.createTree = function(listId, bulletPoint) {
 			document.getElementById(listId).style.display = "none;"
 			var i, j, curElem, ulCount, olCount, listItems = document.getElementById(listId).getElementsByTagName('LI'); //this should be the main parent
 			for(i=0; i<listItems.length; i++) {
@@ -157,7 +166,7 @@
 		// JSLists.applyToList = function(listId, listType, applyIcons, applyTheme, themeNumber){
 		//Check the params here
 		// does the id exist?
-		JSLists.applyToList = function(listId) {
+		JSLists.applyToList = function(listId, bulletPoint) {
             this.createTree(listId, "UL");
 		};
 	return JSLists;
