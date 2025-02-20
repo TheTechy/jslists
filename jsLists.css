@@ -10,15 +10,27 @@ li {list-style: none; line-height: 1.6rem;}
 .jslist-ul, .jslist-ol, .jslist-li {margin-left: 12px;}		/* Unordered lists */
 .jsl-collapsed {display: none;}
 .jsl-list-closed {
-	float: left;
-	clear: both;
-	margin: 2px 4px 2px 0px;
-	width: 18px;
-	height: 18px;
-	cursor: pointer;
-	background-image: url('data:image/svg+xml;utf8,<svg aria-hidden="true" data-prefix="far" data-icon="plus-square" class="svg-inline--fa fa-plus-square fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M352 240v32c0 6.6-5.4 12-12 12h-88v88c0 6.6-5.4 12-12 12h-32c-6.6 0-12-5.4-12-12v-88h-88c-6.6 0-12-5.4-12-12v-32c0-6.6 5.4-12 12-12h88v-88c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v88h88c6.6 0 12 5.4 12 12zm96-160v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V80c0-26.5 21.5-48 48-48h352c26.5 0 48 21.5 48 48zm-48 346V86c0-3.3-2.7-6-6-6H54c-3.3 0-6 2.7-6 6v340c0 3.3 2.7 6 6 6h340c3.3 0 6-2.7 6-6z"></path></svg>');
+    float: left;
+    clear: both;
+    margin: 2px 4px 2px 0px;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    background-image: url('data:image/svg+xml;utf8,<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="4" d="M 22 8.5 C 22 7.394531 21.105469 6.5 20 6.5 L 13.5 6.5 C 12.5 6.421875 11.5 6 11 5 C 10.5 4 9.5 3.5625 8.5 3.5 L 4 3.5 C 2.894531 3.5 2 4.394531 2 5.5 L 2 18.5 C 2 19.605469 2.894531 20.5 4 20.5 L 20 20.5 C 21.105469 20.5 22 19.605469 22 18.5 Z M 22 8.5 "/></svg>');
     background-repeat: no-repeat;
-    background-position: center; 
+    background-position: center;
 }
 .jsl-open {display: block;}
-.jsl-list-open {background-image: url('data:image/svg+xml;utf8,<svg aria-hidden="true" data-prefix="far" data-icon="minus-square" class="svg-inline--fa fa-minus-square fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M108 284c-6.6 0-12-5.4-12-12v-32c0-6.6 5.4-12 12-12h232c6.6 0 12 5.4 12 12v32c0 6.6-5.4 12-12 12H108zM448 80v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V80c0-26.5 21.5-48 48-48h352c26.5 0 48 21.5 48 48zm-48 346V86c0-3.3-2.7-6-6-6H54c-3.3 0-6 2.7-6 6v340c0 3.3 2.7 6 6 6h340c3.3 0 6-2.7 6-6z"></path></svg>');}
+.jsl-list-open {
+    color: red;
+    float: left;
+    clear: both;
+    margin: 2px 4px 2px 0px;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    /* MIT licensed from https://icons.getbootstrap.com/icons/folder2-open/ */
+    background-image: url('data:image/svg+xml;utf8,<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24"><path fill-rule="nonzero" fill="rgb(0%, 0%, 0%)" fill-opacity="1" d="M 1.5 5.25 C 1.5 4.007812 2.507812 3 3.75 3 L 7.894531 3 C 9.332031 3 10.535156 3.839844 11.363281 4.777344 C 11.976562 5.472656 12.71875 6 13.5 6 L 20.25 6 C 21.492188 6 22.5 7.007812 22.5 8.25 L 22.5 9.210938 C 23.355469 9.609375 23.910156 10.523438 23.785156 11.527344 L 22.824219 19.214844 C 22.589844 21.09375 20.992188 22.5 19.097656 22.5 L 4.898438 22.5 C 3.007812 22.5 1.410156 21.09375 1.175781 19.214844 L 0.21875 11.527344 C 0.0976562 10.558594 0.613281 9.621094 1.5 9.210938 Z M 3 9 L 21 9 L 21 8.25 C 21 7.835938 20.664062 7.5 20.25 7.5 L 13.5 7.5 C 12.054688 7.5 10.933594 6.554688 10.238281 5.769531 C 9.5625 5 8.730469 4.5 7.894531 4.5 L 3.75 4.5 C 3.335938 4.5 3 4.835938 3 5.25 Z M 2.449219 10.5 C 2.234375 10.5 2.03125 10.59375 1.886719 10.753906 C 1.746094 10.914062 1.679688 11.128906 1.707031 11.34375 L 2.664062 19.027344 C 2.804688 20.15625 3.765625 21 4.898438 21 L 19.101562 21 C 20.234375 21 21.195312 20.15625 21.335938 19.027344 L 22.292969 11.34375 C 22.320312 11.128906 22.253906 10.914062 22.113281 10.753906 C 21.96875 10.59375 21.765625 10.5 21.550781 10.5 Z M 2.449219 10.5 "/></svg>');
+    background-repeat: no-repeat;
+    background-position: center;
+}
